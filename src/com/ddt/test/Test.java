@@ -34,14 +34,14 @@ public class Test {
 
 		driver.get(baseUrl);
 		Thread.sleep(15000);
-		driver.findElement(By.xpath("//label[@class='_3xpD_']")).click();
-		WebElement ser = driver.findElement(By.xpath("//div[@class='_3FRCZ copyable-text selectable-text']"));
+		driver.findElement(By.xpath("//label[@class='_3xpD_']")).click(); //Search bar
+		WebElement ser = driver.findElement(By.xpath("//div[@class='_3FRCZ copyable-text selectable-text']"));// search bar text field
 		ser.sendKeys(name + "\n");
 		Thread.sleep(3000);
-		driver.findElement(By.xpath("//span[@title='" + name + "']")).click();
+		driver.findElement(By.xpath("//span[@title='" + name + "']")).click(); //contact header
 		while (count-- >= 0) 
 		{
-			WebElement e = driver.findElement(By.xpath("//div[@class='_3uMse']"));
+			WebElement e = driver.findElement(By.xpath("//div[@class='_3uMse']")); //msg text field
 			e.sendKeys(msg + " \n");
 		}
 		driver.close();
